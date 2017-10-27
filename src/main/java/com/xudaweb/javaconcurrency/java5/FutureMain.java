@@ -2,7 +2,6 @@ package com.xudaweb.javaconcurrency.java5;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -25,6 +24,8 @@ public class FutureMain {
 
 			@Override
 			public String call() throws Exception {
+				//Future无法处理异常
+				//throw new RuntimeException("异常");
 				return "[Thread：" + Thread.currentThread().getName() + "]Hello,World...\n";
 			}
 			
