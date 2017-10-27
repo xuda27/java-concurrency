@@ -6,7 +6,7 @@ package com.xudaweb.javaconcurrency.before5;
  * @author 徐达
  * @date 2017年10月26日
  */
-public class CompletedRunnableMain {
+public class CompletableRunnableMain {
 
 	public static void main(String[] args) throws InterruptedException {
 		
