@@ -1,6 +1,5 @@
 package com.xudaweb.javaconcurrency.before5;
 
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Java编程Thread/Runnable（Java 5之前）

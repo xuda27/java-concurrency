@@ -13,10 +13,23 @@ import java.util.concurrent.Executors;
 public class ExecutorMain {
 	
 	public static void main(String[] args) {
-		
 		//执行器，线程池（ThreadPoolExecutor）是它的一种实现
 		//线程池是线程复用
+		
+		//固定长度线程池
+        //好处：线程数量固定，不会存在线程重复初始化
+        //坏处：没有对队列大小进行限制，线程初始化后，再也不能回收线程资源
 		Executor executor = Executors.newFixedThreadPool(1);
+		
+		//CachedThreadPool 执行线程不固定，
+		//好处：可以把新增任务全部缓存在一起，
+	    //坏处：只能用在短时间完成的任务（占用时间较长的操作可以导致线程数无限增大，系统资源耗尽）
+//		Executor executor = Executors.newCachedThreadPool();
+		
+		//单线程线程池
+	    //好处：针对单cpu，单线程避免系统资源的抢夺
+	    //坏处：多cpu多线程时，不能完全利用cpu资源
+//		Executor executor = Executors.newSingleThreadExecutor();
 		executor.execute(new Runnable() {
 			@Override
 			public void run() {
