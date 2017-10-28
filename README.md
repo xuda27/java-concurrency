@@ -38,3 +38,16 @@
   - 编程模型
       - CompletionStage
       - CompletableFuture（异步结果处理、链式处理、合并结果、异常处理）
+## Reactive Streams
+- 核心
+    - Publisher 发布者
+    - Subscriber 订阅者
+    - Subcription 订阅内容
+    - Processor = Publisher + Subscriber
+- [ReactiveStreams](https://github.com/reactive-streams/reactive-streams-jvm)
+- [ReactiveX](http://reactivex.io/)： 异步（asynchronous ）、基于事件（event-based）、观察者（observable ）
+## Java 9 前时代
+- 观察者模式：Java支持
+- 事件监听模式：Java Beans = POJO
+- Reactor（反应）模式，NIO
+## Java 9 时代

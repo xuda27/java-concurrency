@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * {@link CompletableFuture} Demo
- * 
+ *
  * @author 徐达
  * @date 2017年10月27日
  * @see CompletionStage
@@ -56,7 +56,7 @@ public class CompletableFutureMain {
 		//数据库操作费时，阻塞主线程
 		//RT responseTime QPS/TPS
 		//异步的特点，不要求立马返回
-		// WebFlux 异步的web  提高吞吐量
+		// WebFlux 异步的web 提高吞吐量
 		CompletableFuture combinedCompletableFuture = CompletableFuture.supplyAsync(() -> {
 			//获取数据操作，假设来自于数据库
 			return String.format("[Thread：%s]Hello,World...", Thread.currentThread().getName());
