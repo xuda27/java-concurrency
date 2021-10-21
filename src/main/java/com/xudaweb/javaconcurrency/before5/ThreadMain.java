@@ -25,7 +25,11 @@ public class ThreadMain {
 		}, "Sub");
 		
 		thread.start();
-		
+
+
+		new Thread(() ->
+			System.out.printf("[Thread：%s]Hello,World...\n", Thread.currentThread().getName())
+		).start();
 		System.out.printf("[Thread：%s]Starting...\n", Thread.currentThread().getId());
 		
 		//输出：执行顺序重排序

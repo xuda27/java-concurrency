@@ -38,6 +38,7 @@ public class ExecutorMain {
 		//合理地关闭线程池是非常重要的
 		if (executor instanceof ExecutorService) {
 			ExecutorService executorService = ExecutorService.class.cast(executor);
+
 			//当调用ExecutorService.shutdown方法的时候，线程池不再接收任何新任务，但此时线程池并不会立刻退出，直到添加到线程池中的任务都已经处理完成，才会退出。
 			executorService.shutdown();
 			// 判断线程是否全部完成

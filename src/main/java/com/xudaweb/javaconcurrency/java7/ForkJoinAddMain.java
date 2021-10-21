@@ -56,8 +56,8 @@ public class ForkJoinAddMain {
 				List<Integer> leftPart = nums.subList(0, parts);
 				AddTask leftTask = new AddTask(leftPart, longAdder);
 				//右半部
-				List<Integer> rightpart = nums.subList(parts, size);
-				AddTask rightTask = new AddTask(rightpart, longAdder);
+				List<Integer> rightPart = nums.subList(parts, size);
+				AddTask rightTask = new AddTask(rightPart, longAdder);
 				
 				invokeAll(leftTask, rightTask); //fork/join
 			} else { //当前元素只有一个

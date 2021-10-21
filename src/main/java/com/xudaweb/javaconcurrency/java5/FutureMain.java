@@ -23,7 +23,7 @@ public class FutureMain {
 		Future<String> future = executorService.submit(new Callable<String>() {
 
 			@Override
-			public String call() throws Exception {
+			public String call() {
 				//Future无法处理异常
 				//throw new RuntimeException("异常");
 				return "[Thread：" + Thread.currentThread().getName() + "]Hello,World...\n";

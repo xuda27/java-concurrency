@@ -32,7 +32,7 @@ public class ExecutorDemo {
         //坏处：多cpu多线程时，不能完全利用cpu资源
 //		Executor executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> {
-            HttpClientUtil.doPost("http://localhost:7001/invoke/startProcessInstance");
+//            HttpClientUtil.doPost("http://localhost:7001/invoke/startProcessInstance");
             System.out.printf("[Thread：%s]Hello,World...\n", Thread.currentThread().getName());
         });
 
